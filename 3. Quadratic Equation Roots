@@ -1,0 +1,18 @@
+class Solution {
+    public ArrayList<Integer> quadraticRoots(int a, int b, int c) {
+        // code here
+          ArrayList<Integer> x= new ArrayList<>();
+           double D=(b*b-4*a*c);
+       if(D<0)
+       {
+           x.add(-1);
+       }
+       else{
+           D=Math.sqrt(D);
+       double n=(-b+D)/(2*a);
+       double m=(-b-D)/(2*a);
+       x.add((int)Math.floor(Math.max(n,m)));
+       x.add((int)Math.floor(Math.min(n,m)));}
+       return x;
+    }
+}
